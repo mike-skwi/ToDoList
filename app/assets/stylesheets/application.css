@@ -29,14 +29,23 @@ h1{
     font-weight: 600;
 
 }
+h2{
+    text-align: center;
+}
+h3{
+    font-size: 20px;
+}
 
 .top{
+    padding-top:5px;
     margin-left: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
     background-color: #808B95;
     border-radius-top: 5px;
+
 }
 .bottom{
     color: white;
@@ -46,13 +55,15 @@ h1{
     height: auto;
     border-radius-bottom: 5px;
     padding:20px;
+    padding-right: 20px;
 
 }
 
-.button{
-    
+.btn btn-primary{
+    color:red;
     
 }
-.text_field{
-
+input{
+    width: 300px;
+    
 }
