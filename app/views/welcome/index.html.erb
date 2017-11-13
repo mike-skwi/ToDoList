@@ -16,7 +16,11 @@
     <ol>
     <% @tasks.each do |task| %>
         <h3>
-            <li><%=task.item %></li>
+            <li>
+                <%=task.item %>
+                <span class='delete-button'><%= link_to 'delete', task, method: :delete %></span>
+            </li>
+                
         </h3>
     <% end %>
     </ol>
