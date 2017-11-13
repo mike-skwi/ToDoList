@@ -13,12 +13,15 @@
     
     <h2> Your List</h2>
     <hr>
+    <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+    <% end %>
     <ol>
     <% @tasks.each do |task| %>
         <h3>
             <li>
                 <%=task.item %>
-                <span class='delete-button'><%= link_to 'delete', task, method: :delete %></span>
+                <span class='delete-button'><%= link_to 'remove', task, method: :delete, data: {confirm: "Would you like to delete this item?"} %></span>
             </li>
                 
         </h3>
