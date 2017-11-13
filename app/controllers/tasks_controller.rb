@@ -1,5 +1,5 @@
-class TaskController < ApplicationController
-  def create
+class TasksController < ApplicationController
+    def create
       @task = Task.new(task_params)
       if @task.save
         redirect_to root_path
@@ -15,5 +15,5 @@ class TaskController < ApplicationController
         params.require(:task).permit(:item)
       end
 
-  
+
 end

@@ -1,15 +1,22 @@
-<h1>Mike's To Do List</h1>
-<h1>Enter an item to get started</h1>
+<h1>To Do List</h1>
 
 <div class='top'>
     <h2>Enter a task here</h2>
     <%= form_with scope: :task, url: tasks_path do |f| %>
+        <br>
         <%= f.text_field :item, placeholder: "example: Go Shopping" %>
-        <%= f.submit "Enter", class: "button" %>
+        <br><br>
+        <%= f.submit "Enter", class: "btn btn-primary" %>
     <% end %> 
 </div>
 <div class='bottom'>
-    Testing Right
     
-    
+    <h2> Your List</h2>
+    <ol>
+    <% @tasks.each do |task| %>
+        <h3>
+            <li><%=task.item %></li>
+        </h3>
+    <% end %>
+    </ol>
 </div>
